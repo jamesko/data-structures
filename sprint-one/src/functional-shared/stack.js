@@ -1,13 +1,20 @@
 var Stack = function(){
-  var obj = {};
+  var obj = {count: 0};
   _.extend(obj, stackMethods);
   return obj;
 };
 
 var stackMethods = {
-  push  :  function(){},
-  pop   :  function(){},
-  size  :  function(){ return 0;}
+  push  :  function(){
+    this.count += 1;
+  },
+
+  pop   :  function(){
+    this.count -= 1;
+
+  },
+
+  size  :  function(){ return this.count;}
 };
 
 
