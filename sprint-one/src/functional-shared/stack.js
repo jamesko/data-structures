@@ -10,7 +10,10 @@ var stackMethods = {
   },
 
   pop   :  function(){
-    this.count -= 1;
+    if (this.count > 0) {
+      this.count -= 1;
+    }
+
 
   },
 
