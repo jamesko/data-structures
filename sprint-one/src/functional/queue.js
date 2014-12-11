@@ -9,12 +9,15 @@ var Queue = function(){
 
   someInstance.enqueue = function(value){
     count += 1;
+    storage[count] = value;
   };
 
   someInstance.dequeue = function(){
+    var temp = storage[count];
     if (count >0) {
       count -= 1;
     }
+    return temp;
   };
 
   someInstance.size = function(){
