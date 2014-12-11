@@ -1,5 +1,5 @@
 var Queue = function(){
-    var obj = {};
+    var obj = {count : 0};
     
     _.extend(obj, queueMethods);
     
@@ -8,12 +8,16 @@ var Queue = function(){
 
 var queueMethods = {
     
-    enqueue: function(){},
+    enqueue: function(){
+              this.count++;
+    },
     
-    dequeue: function(){},
+    dequeue: function(){
+              this.count--;
+    },
     
     size   : function(){
-        return 0;
+        return this.count;
     }
     
 };
