@@ -13,12 +13,17 @@ var Queue = function(){
   };
 
   someInstance.dequeue = function(){
+
+    var temp = storage[1]; 
+    delete storage[1];
     
-    var numericKeys = _.map(Object.keys(storage), function(item){
-      return Number(item);
-    });
-    var temp = storage[Math.min.apply(null, numericKeys)];
-    
+    buffer = {};
+    _.each(storage, function(value, key){
+        buffer[key-1] = storage[key];
+    })
+
+    storage = buffer;
+
     if (count >0) {
       count -= 1;
     }
