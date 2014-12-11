@@ -13,7 +13,12 @@ var Queue = function(){
   };
 
   someInstance.dequeue = function(){
-    var temp = storage[count];
+    
+    var numericKeys = _.map(Object.keys(storage), function(item){
+      return Number(item);
+    });
+    var temp = storage[Math.min.apply(null, numericKeys)];
+    
     if (count >0) {
       count -= 1;
     }
