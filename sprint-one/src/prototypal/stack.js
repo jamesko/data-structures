@@ -8,6 +8,9 @@ var stackMethods = {
   push : function() {
     this.count++;
   },
+  pop: function(){
+    this.count --;
+  },
   size : function(){
     return this.count;
   }
