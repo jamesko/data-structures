@@ -7,7 +7,9 @@ Stack.prototype = {
     this.count++;
   },
   pop  : function() {
-    this.count--;
+    if (this.count > 0) {
+      this.count--;
+    }
   },
   size : function() {return this.count}
 };
