@@ -11,6 +11,7 @@ var queueMethods = {
     },
     
     dequeue: function(){
+        this.count--;
         
     },
     
