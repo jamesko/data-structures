@@ -6,8 +6,16 @@ var Queue = function() {
 
 var queueMethods = {
     
+    enqueue: function(){
+        this.count++;
+    },
+    
+    dequeue: function(){
+        
+    },
+    
     size: function(){
-        return 0;
+        return this.count;
     }
     
 };
