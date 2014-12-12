@@ -5,7 +5,12 @@ var Stack = function() {
 };
 
 var stackMethods = {
-  size : function(){return this.count;}
+  push : function() {
+    this.count++;
+  },
+  size : function(){
+    return this.count;
+  }
 };
 
 
